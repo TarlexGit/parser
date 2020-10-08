@@ -46,6 +46,7 @@ def search():
     print(lis, file=resaultfile) 
     display_inventory(lis)
 
+
 if __name__ == "__main__": 
     url = 'https://docs.python.org/3/library/multiprocessing.html'
     getText(url)
