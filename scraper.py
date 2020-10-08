@@ -8,7 +8,7 @@ import operator
 def getText(url):
     html = urlopen(url)
     soup = BeautifulSoup(html, 'html.parser')
-    fout = open('scraper', 'w+')
+    fout = open('text', 'w+')
     
     for tag in soup.find_all(re.compile("^p")):
         text = tag.text
@@ -16,7 +16,7 @@ def getText(url):
     fout.close()
 
 def search():
-    input_filename = 'scraper'
+    input_filename = 'text'
     result_filename = 'result'
     inputfile = open(input_filename, mode='r')
     resaultfile = open(result_filename, mode='w')
